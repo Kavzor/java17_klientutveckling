@@ -119,6 +119,172 @@
       </figure>
   </div>
     
+    <hr>
+    
+  <div id="lists">
+      <!-- unordered list -->
+    <ul>
+      <li>Parrot</li>
+      <li>Eagle</li>
+      <li>Rabbit</li>
+    </ul>
+    <ul style="list-style-type: circle">
+      <li>Parrot</li>
+      <li>Eagle</li>
+      <li>Rabbit</li>
+    </ul>
+    <ul style="list-style-type: square">
+      <li>Parrot</li>
+      <li>Eagle</li>
+      <li>Rabbit</li>
+    </ul>
+    <ul style="list-style-type: none">
+      <li>Parrot</li>
+      <li>Eagle</li>
+      <li>Rabbit</li>
+    </ul>
+      
+      <hr>
+      
+      <!-- ordered list -->
+      <ol start="2">
+        <li>Mix two</li>
+        <li>Into one</li>
+        <li>Add the third</li>
+      </ol>
+      <ol type="I" start="10">
+        <li>Mix two</li>
+        <li>Into one</li>
+        <li>Add the third</li>
+      </ol>
+      <ol type="a" start="27">
+        <li>Mix two</li>
+        <li>Into one</li>
+        <li>Add the third</li>
+      </ol>
+      
+      <!-- definition list -->
+      <dl>
+        <dt>HTML</dt>
+          <dd>
+            Hyper text markup language
+          </dd>
+        <dt>CSS</dt>
+          <dd>
+            Cascading style sheet
+          </dd>
+      </dl>
+  </div>
+    
+    <hr>
+    
+  <div id="tables">
+    <table>
+      <thead>
+        <tr>
+          <th>Employee</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kenneth</td>
+          <td>967$</td>
+        </tr>
+        <tr>
+          <td>Sam</td>
+          <td>433$</td>
+        </tr>
+      </tbody>
+      <tfoot>
+          <tr>
+            <td>Total</td>
+            <td>1430$</td>
+          </tr>
+      </tfoot>
+    </table>
+  </div>
+    
+    <hr>
+    
+  <div id="forms">
+    
+      <!-- action är dit vi skickar datan i formuläret -->
+    <form action="#">
+      <div>
+        <label>Username</label>
+        <input type="text"                                  placeholder="Insert username.."
+               maxlength="10"
+               required>
+      </div>
+      <div>
+        <label for="password_field">Password</label>
+        <input type="password" 
+               id="password_field" 
+               placeholder="Insert password..">
+      </div>
+      <div>
+        <label>Remember me</label>
+        <!-- name attribut används för att radio buttons ska veta vilka de tillhör -->
+        <input name="remember_me"
+               type="radio" id="remember_yes">
+        <label for="remember_yes">yes</label>
+        
+        <input name="remember_me" 
+               type="radio" id="remember_no" checked>
+        <label for="remember_no">no</label>
+      </div>
+      <div>
+        <label>Remember me duration</label>  
+        <select>
+          <option>3 months</option>
+          <option selected>6 months</option>
+          <option>9 months</option>
+        </select>
+      </div>
+      <!--<input type="submit" value="Skicka data..">-->
+        <button type="submit">Skicka data..</button>
+        <button type="reset">Rensa</button>
+    </form>
+  </div>
+    
+    <hr>
+    
+
+  <div id="semantics"> 
+      <!-- beskriva innehållet -->
+    <header>
+      <h1>Main topic</h1>
+      <label>Sub topic</label>
+    </header>
+      
+      <!-- Omsluter huvudinnehållet -->
+    <main>
+      <div>
+        This is main content  
+      </div>
+    </main>
+      
+      <!-- section grupper generiskt innehåll -->
+    <section>
+        <h2>Animals</h2>  
+        
+        <!-- article är ett självständigt innehåll, ska gå att plocka bort utan att "förstöra" dokumentet -->
+        <article>
+            <h3>Cats</h3>
+            some information about cats
+        </article>
+        <article>
+            <h3>Dogs</h3>
+            some information about dogs
+        </article>
+    </section>
+      
+      <!-- Information om innehållet, senast uppdaterad, vem som skapade inlägget etc.-->
+    <footer>
+        Created by <a href="mailto:abc@def.com">Jakob rolandsson</a> 
+    </footer>
+  </div>
 </body>
 </html>
 
