@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Intro</title>
+    <!-- Främst riktade mot mobiler för att anpassa skärmen-->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1" >
+    <link rel="stylesheet"
+          href="styles/style.css" >
+</head>
+<body>
+  <section>
+    <h1>CSS Material</h1>
+      <!-- article motsvarar body tagen i detta exempel för att skapa en unik del av dokumentet -->
+		<article id="selectors">
+			<h2>Selectors</h2>
+			<div>
+				<hr>
+				First div
+				<div>
+					<hr>
+					Second div
+					<div>
+						<hr>
+						Third div
+					</div>
+				</div>
+				<hr>
+				Back in the first div
+			</div>
+			<div>
+				<hr>
+				Outside div
+			</div>
+
+			<h2>Lots of necessary facts</h2>
+			<ul class="list">
+				<li class="list-item">
+						Spain is a country
+				</li>
+				<li class="list-item">
+						Earth is square-shaped
+				</li>
+				<li class="list-item">
+						We are all aliens
+				</li>
+				<li class="list-item">
+						2 crowns will never be
+				</li>
+				<li class="list-item">
+						Three letters in a row
+				</li>
+				<li class="list-item">
+						Last statement is not
+				</li>
+				<li class="list-item">
+						We are
+				</li>
+			</ul>
+		</article>
+
+		<article id="fonts">
+				<h2>Fonts</h2>
+				<div>
+						<h3>Dummy text</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis risus a feugiat vulputate. Etiam faucibus purus vel nisi lobortis maximus. Quisque euismod tortor eget nibh vestibulum lacinia. Phasellus venenatis risus vitae arcu sodales, nec vehicula massa bibendum. Proin et odio quis dolor cursus sodales non at velit. Pellentesque nibh est, finibus non auctor in, condimentum non mauris. Pellentesque cursus risus nec dolor tempus, quis congue arcu faucibus. Curabitur maximus cursus eros at gravida. In vel felis id eros tempor porta. Maecenas placerat congue nunc sit amet tristique. Fusce non facilisis sem. In maximus commodo egestas. Suspendisse pretium, risus et tincidunt pharetra, orci augue varius ante, sit amet elementum massa diam vel odio. Donec laoreet ante a gravida sagittis. Nullam eu mi vitae justo molestie volutpat at eget leo. Proin tristique rhoncus lacus, ut lobortis nibh fringilla non.
+						</p>
+				</div>
+		</article>
+			
+		<article id="boxes">
+			<h2>Box model</h2>
+			<div>
+				<div class="box red">
+						1
+				</div>
+				<div class="box blue">
+						2
+				</div>
+			</div>
+
+			<header>
+				<h3>Some headline</h3>
+				<p>Some subtitle</p>
+			</header>
+		</article>
+		
+		<article id="layout">
+			<h2>Layout</h2>
+			<div id="first">
+				<div class="box left">
+					left
+				</div>
+				<div class="box right">
+					right
+				</div>
+			</div>
+			<div id="second">
+				<div class="box left">
+					left
+				</div>
+				<div class="box right">
+					right
+				</div>
+			</div>
+			<div class="row">
+				<div class="left-column">
+					<figure>
+						<img width="64" src="https://cdn.pixabay.com/photo/2016/08/25/07/30/red-1618916_960_720.png">
+					</figure>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis risus a feugiat vulputate. Etiam faucibus purus vel nisi lobortis maximus. Quisque euismod tortor eget nibh vestibulum lacinia. Phasellus venenatis risus vitae arcu sodales, nec vehicula massa bibendum. Proin et odio quis dolor cursus sodales non at velit. Pellentesque nibh est, finibus non auctor in, condimentum non mauris. Pellentesque cursus risus nec dolor tempus, quis congue arcu faucibus. Curabitur maximus cursus eros at gravida. In vel felis id eros tempor porta. Maecenas placerat congue nunc sit amet tristique. Fusce non facilisis sem. In maximus commodo egestas. Suspendisse pretium, risus et tincidunt pharetra, orci augue varius ante, sit amet elementum massa diam vel odio. Donec laoreet ante a gravida sagittis. Nullam eu mi vitae justo molestie volutpat at eget leo. Proin tristique rhoncus lacus, ut lobortis nibh fringilla non.
+					</p>
+				</div>
+				<div class="right-column">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam convallis risus a feugiat vulputate. Etiam faucibus purus vel nisi lobortis maximus. Quisque euismod tortor eget nibh vestibulum lacinia. Phasellus venenatis risus vitae arcu sodales, nec vehicula massa bibendum. Proin et odio quis dolor cursus sodales non at velit. Pellentesque nibh est, finibus non auctor in, condimentum non mauris. Pellentesque cursus risus nec dolor tempus, quis congue arcu faucibus. Curabitur maximus cursus eros at gravida. In vel felis id eros tempor porta. Maecenas placerat congue nunc sit amet tristique. Fusce non facilisis sem. In maximus commodo egestas. Suspendisse pretium, risus et tincidunt pharetra, orci augue varius ante, sit amet elementum massa diam vel odio. Donec laoreet ante a gravida sagittis. Nullam eu mi vitae justo molestie volutpat at eget leo. Proin tristique rhoncus lacus, ut lobortis nibh fringilla non.
+					</p>
+				</div>
+			</div>
+		</article>
+		
+		<article id="forms">
+			<h2>Forms</h2>
+			<form>
+				<div>
+					<p>
+						<label>
+							<span>Username</span>
+						</label>
+						<input pattern=".{3,}"
+									 type="text" 
+									 placeholder="Inser username..">
+					</p>
+				</div>
+				<div>
+					<p>
+						<label>
+							<span>Password</span>
+						</label>
+						<input type="password" 
+									 placeholder="Insert password..">
+					</p>
+				</div>
+				<div>
+					<label>Remember me</label>
+					<div>
+						<label for="remember_yes">Yes</label>
+						<input 
+									 type="radio" 
+									 value="yes" 
+									 name="remember_me"
+									 id="remember_yes">
+						
+						<label for="remember_no">No</label>
+						<input 
+									 type="radio"
+									 value="no"
+									 name="remember_me"
+									 id="remember_no">
+						
+						<div class="remember_duration">
+							<select>
+								<option>3 months</option>
+								<option>6 months</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<button type="submit">Register</button>
+			</form>
+		</article>
+		
+		
+		<article id="transforms">
+			<h2>Transform</h2>
+			<div class="box left">
+				left
+			</div>
+			<div class="box right">
+				right
+			</div>
+		</article>
+		
+		<article id="animations">
+			<h2>Animation</h2>
+			<div>
+				<button>Hover me</button>
+				<div class="box moving">
+				</div>
+				<hr>
+				<div class="box boucing">
+				</div>
+			</div>
+		</article>
+		
+		<article id="navigation">
+			<h2>
+				Navigation & Responsiveness
+			</h2>
+			
+			<nav>
+				<ul>
+					<li>
+						<a href="#">Home</a>
+					</li>
+					<li>
+						<a href="#">About</a>
+					</li>
+					<li>
+						<a href="#">Something more</a>
+					</li>
+					<li>
+						<a href="#">Something else</a>
+					</li>
+				</ul>
+			</nav>
+		</article>
+  </section>
+</body>
+</html>
+
+
+
+

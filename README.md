@@ -7,5 +7,9 @@ Måndag 12/2
 * [HTML facebook - semantics](https://github.com/Kavzor/java17_klientutveckling/blob/master/HTML/facebook.html)
 
 Torsdag 15/2
-* [CSS page - basics](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/index.html)
-* [CSS style - basics](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/styles/style.css)
+* [CSS index - basics](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/intro/index.html)
+* [CSS style - basics](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/intro/styles/style.css)
+
+Måndag 19/2
+* [CSS index - fortsättningen](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/intermediate/index.html)
+* [CSS style - fortsättningen](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/intermediate/styles/style.css)
