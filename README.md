@@ -13,3 +13,4 @@ Torsdag 15/2
 Måndag 19/2
 * [CSS index - fortsättningen](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/intermediate/index.html)
 * [CSS style - fortsättningen](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/intermediate/styles/style.css)
+* [CSS Bootstrap](https://github.com/Kavzor/java17_klientutveckling/blob/master/CSS/bootstrap/index.html)
