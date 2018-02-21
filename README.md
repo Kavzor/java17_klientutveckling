@@ -17,3 +17,7 @@ Måndag 19/2
 
 Tisdag 20/2
 * [Javascript - intro](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/intro/app.js)
+
+Onsdag 21/2
+* [Javascript - Objekt & Arv (prototyper)](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/intermediate/app.js)
+* [Javascript - DOM (kort intro)](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/DOM)
