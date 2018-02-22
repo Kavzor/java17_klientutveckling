@@ -1,0 +1,19 @@
+.profile-cards, .airplane-cards {
+  margin: 1em 0 0 0;
+}
+
+.profile-card, .airplane-card {
+  display: inline-block;
+  width: 25%;
+  border: 2px solid burlywood;
+  border-radius: 10px;
+}
+
+.profile-card h2, .airplane-card h2 {
+  border-bottom: 2px solid black;
+  font-size: 1.5rem;
+}
+
+.profile-card h2, .airplane-card h2, p {
+  padding: 0.5em 1em 0.5em 1em;
+}

@@ -2,14 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" 
+    content="width=device-width,
+     initial-scale=1.0">
   <title>Document</title>
+  <link href="assets/styles/general.css" rel="stylesheet">
+  <link href="assets/styles/card.css" rel="stylesheet">
 </head>
 <body>
-  
 
+  <header>
+    <h1>Cards everywhere</h1>
+  </header>
 
+  <div class="container">
+    <div class="profile-cards">
+
+    </div>
+    <div class="airplane-cards">
+      
+    </div>
+  </div>
+
+  <div class="container theme-darkBlue">
+    <ul>
+      <li>Pets</li>
+      <li>Pies</li>
+      <li>Apples</li>
+      <li>Lots of items</li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <form>
+      <div>
+        <label>Your name: </label>
+        <input type="text" autocomplete="off" id="name-input">
+      </div>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+    <label>Your name is <span id="name-output"></span></label>
+    <hr>
+    <div id="template-output"></div>
+  </div>
+
+  <script src="assets/scripts/card.js"></script>
   <script src="assets/scripts/app.js"></script>
-</body>
-</html>
+
+  </body>
+  </html>

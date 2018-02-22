@@ -1,0 +1,33 @@
+@import url("reset.css");
+
+body {
+  padding-bottom: 300px;
+}
+
+body > :not(nav):not(header):not(footer) {
+  margin: 0 5% 0 5%;
+}
+
+body > header {
+  text-align: center;
+  background-color: darkslategrey;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.container {
+  margin: 30px;
+}
+.container ul {
+  font-size: 1.5rem;
+}
+
+.theme-darkBlue {
+  background-color: darkblue;
+  color: white;
+}
+
+.theme-darkRed {
+  background-color: red;
+  color: white;
+}
