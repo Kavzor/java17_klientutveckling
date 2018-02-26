@@ -24,3 +24,6 @@ Onsdag 21/2
 
 Torsdag 22/2
 * [Javascript DOM](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/DOM)
+
+Måndag 26/2
+* [Javascript AJAX + http](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/async)
