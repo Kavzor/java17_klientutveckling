@@ -1,0 +1,47 @@
+.calculator {
+  margin-top: 2em;
+  display: block;
+  border-radius: 20px;
+  background-color: #efa361;
+  overflow: hidden;
+}
+
+.calculator-display {
+  display: inline-block;
+  background-color: #ccc;
+  height: 3em;
+  width: 100%;
+
+  /* centrera text */
+  text-align: center;
+  line-height: 3em;
+
+  /* bugg fix för text som tas fram i en tom ruta, utan denna som kommer storleken
+    på displayen att ändras när siffrorna dycker upp*/
+  vertical-align: top;  
+}
+
+
+.calculator-body {
+  margin-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.number-button, .sign-button {
+  width: 30%;
+  height: 3em;
+}
+
+
+.result {
+  background-color: hsla(200, 100%, 50%, 1);
+  min-height: 300px;
+  border-radius: 15px;
+}
+
+.result > h2 {
+  padding: 1em;
+  font-weight: bold;
+}
+

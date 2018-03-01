@@ -1,0 +1,16 @@
+@import url("reset.css");
+
+body > :not(header):not(nav):not(footer) {
+  margin: 0 5% 0 5%;
+}
+
+body {
+  background: linear-gradient(90deg, hsla(200, 100%, 70%, 1), hsla(200, 100%, 40%, 1));
+  color: hsla(0, 100%, 100%, 1);
+}
+
+body > header {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1em;
+}
