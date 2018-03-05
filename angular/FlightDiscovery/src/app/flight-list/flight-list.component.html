@@ -1,0 +1,71 @@
+
+<div class="form-group">
+  <label for="filterInput">Filter</label>
+  <input 
+    [(ngModel)]="flightFilter"
+    id="filterInput" class="form-control col-3">
+</div>
+<!-- table-responsive sätter en scroll på tabellen när den blir förliten-->
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>
+          <button 
+            (click)="toggleImages()"
+            class="btn btn-danger">
+            {{ showImages ? 'Hide' : 'Show' }} plane images
+          </button>
+        </th>
+        <th>
+          Number
+        </th>
+        <th>
+          Type
+        </th>
+        <th>
+          Gate
+        </th>
+        <th
+          title="toggle clock"
+          (click)="toggleClock()">
+          Departs
+        </th>
+        <th>
+          Destination
+        </th>
+        <th>
+          Delays
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let flight of filteredFlights">
+        <td>
+          <img *ngIf="showImages" height="30" width="80" [src]="flight.image">
+        </td>
+        <td>
+          {{ flight.number }}
+        </td>
+        <td>
+          {{ flight.type | uppercase }}
+        </td>
+        <td>
+          {{ flight.gate }}
+        </td>
+        <td>
+          {{ flight.departs | clock:showPeriodTime }}
+        </td>
+        <td>
+          {{ flight.destination }}
+        </td>
+        <td>
+          {{ flight.delays | time:'minute':'hour' }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

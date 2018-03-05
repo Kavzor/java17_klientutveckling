@@ -30,3 +30,6 @@ Måndag 26/2
 
 Onsdag 28/2
 * [Javascript + JQuery] (https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/jquery)
+
+Måndag 05/3
+* [Angular 5 - FlightDiscovery] (https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/angular/FlightDiscovery)
