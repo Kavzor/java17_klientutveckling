@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Flight } from '../shared/flights';
+import { FlightService } from '../shared/flight.service';
 
 @Component({
   selector: 'app-flight-list',
@@ -22,43 +23,15 @@ export class FlightListComponent implements OnInit { //interfaces är syntax sug
   }
 
   filter: string;
-  flights: Array<Flight> = [
-    {
-      image: "http://sketchof.com/1024/drawing-of-a-sketched-white-design-mascot-flying-a-plane-with-a-passenger-by-leo-blanchette-290.jpg",
-      number: 42,
-      type: "Private",
-      gate: "16AD",
-      departs: "03:32",
-      destination: "Beijing",
-      delays: "0"
-    },
-    {
-      image: "http://users.skynet.be/porreke/plane2.jpg",
-      number: 653,
-      type: "Jumbo",
-      departs: "12:42",
-      gate: "32D",
-      destination: "Stockholm",
-      delays: "343" //prova 59, 29, 61 och 0
-    },
-    {
-      image: "http://www.yedraw.com/transport/fighter-plane-6.jpg",
-      number: 77,
-      type: "Fighter",
-      gate: "Classified",
-      departs: "Classified",
-      destination: "Classified",
-      delays: "Classified"
-    }
-  ]
-
+  flights: Array<Flight>;
 
   //Så konstruktorn i angular, ska endast användas för att instansiera objekt
   //Inte till att tilldela värden
-  constructor() { }
+  constructor(private flightService: FlightService) { }
 
   //Här vill vi tilldela data
   ngOnInit() {
+    this.flights = this.flightService.findAll();
     this.filteredFlights = this.flights;
   }
 
