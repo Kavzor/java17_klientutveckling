@@ -36,3 +36,4 @@ Måndag 05/3
 
 Tisdag 06/3
 * [Angular 5 - Nynas](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/angular/Nynas)
+* [Angular 5 - FlightDiscovery med admin panel](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/angular/FlightDiscovery)

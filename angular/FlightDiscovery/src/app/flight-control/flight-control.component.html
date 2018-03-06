@@ -4,32 +4,33 @@
       <h2>Change flights</h2>
       <div class="form-group">
         <label class="form-text">Number</label>
-        <input class="form-control">
+        <input [(ngModel)]="flight.number" name="number" class="form-control">
       </div>
       <div class="form-group">
-        <label class="form-text">Number</label>
-        <input class="form-control">
+        <label class="form-text">Type</label>
+        <input [(ngModel)]="flight.type" name="type" class="form-control">
       </div>
       <div class="form-group">
-        <label class="form-text">Number</label>
-        <input class="form-control">
+        <label class="form-text">Gate</label>
+        <input [(ngModel)]="flight.gate" name="gate" class="form-control">
       </div>
       <div class="form-group">
-        <label class="form-text">Number</label>
-        <input class="form-control">
+        <label class="form-text">Departs</label>
+        <input [(ngModel)]="flight.departs" name="departs" class="form-control">
       </div>
       <div class="form-group">
-        <label class="form-text">Number</label>
-        <input class="form-control">
+        <label class="form-text">Delays</label>
+        <input [(ngModel)]="flight.delays" name="delays" class="form-control">
       </div>
       <div class="form-group">
-        <label class="form-text">Number</label>
-        <input class="form-control">
+        <label class="form-text">Image</label>
+        <input [(ngModel)]="flight.image" name="image" class="form-control">
       </div>
-      <button class="btn btn-primary" type="submit">
-        Change flight info
+      <button class="btn btn-primary" type="submit"
+        (click)="activeIndex < 0 ? addFlight(flight) : updateFlight(activeIndex, flight)">
+        {{ activeIndex < 0 ? 'Add' : 'Update' }} flight
       </button>
-      <button class="btn btn-warning">
+      <button class="btn btn-warning" (click)="clearFlight()">
         Clear fields
       </button>
     </form>
@@ -38,7 +39,9 @@
       <h2>Active flights</h2>
       <ul class="list-group">
         <li class="list-group-item list-group-item-action"
-          *ngFor="let listFlight of flights; index as flightIndex">
+          *ngFor="let listFlight of flights; index as flightIndex"
+          (click)="setActiveIndex(flightIndex)"
+          [class.active]="activeIndex == flightIndex">
             {{ listFlight.number }}
           <span (click)="removeFlight(flightIndex)" class="float-right">X</span>
         </li>
