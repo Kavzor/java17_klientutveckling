@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+    <form class="col-6">
+      <h2>Change flights</h2>
+      <div class="form-group">
+        <label class="form-text">Number</label>
+        <input class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-text">Number</label>
+        <input class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-text">Number</label>
+        <input class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-text">Number</label>
+        <input class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-text">Number</label>
+        <input class="form-control">
+      </div>
+      <div class="form-group">
+        <label class="form-text">Number</label>
+        <input class="form-control">
+      </div>
+      <button class="btn btn-primary" type="submit">
+        Change flight info
+      </button>
+      <button class="btn btn-warning">
+        Clear fields
+      </button>
+    </form>
+
+    <div class="col-6">
+      <h2>Active flights</h2>
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action"
+          *ngFor="let listFlight of flights; index as flightIndex">
+            {{ listFlight.number }}
+          <span (click)="removeFlight(flightIndex)" class="float-right">X</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
