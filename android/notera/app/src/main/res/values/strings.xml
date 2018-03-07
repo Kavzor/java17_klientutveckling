@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notera</string>
+    <string name="sterotype_message">Hello</string>
+    <string name="main_add_btn">Add Note</string>
+    <string name="main_default_remove_btn">Remove (0)</string>
+    <string name="main_format_remove_btn">Remove (%d)</string>
+    <string name="main_search_note">Search..</string>
+</resources>

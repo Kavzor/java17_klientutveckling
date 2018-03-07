@@ -37,3 +37,6 @@ Måndag 05/3
 Tisdag 06/3
 * [Angular 5 - Nynas](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/angular/Nynas)
 * [Angular 5 - FlightDiscovery med admin panel](https://github.com/Kavzor/java17_klientutveckling/blob/master/Javascript/angular/FlightDiscovery)
+
+Onsdag 07/3
+* [Android - Notera](https://github.com/Kavzor/java17_klientutveckling/android\notera\app\src\main)

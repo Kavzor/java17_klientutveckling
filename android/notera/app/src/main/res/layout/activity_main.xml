@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="nu.rolandsson.jakob.notera.MainActivity">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:queryHint="@string/main_search_note"
+        android:id="@+id/main_note_search"/>
+
+    <nu.rolandsson.jakob.notera.component.NoteListComponent
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/main_note_search"
+        android:layout_above="@+id/main_bottom_toolbar"
+        android:id="@+id/main_note_list"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        style="?android:attr/buttonBarButtonStyle"
+        android:id="@+id/main_bottom_toolbar">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/main_add_btn"
+            android:layout_weight="1"
+            android:id="@+id/main_add_button"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/main_default_remove_btn"
+            android:layout_weight="1"
+            android:id="@+id/main_remove_button"/>
+    </LinearLayout>
+
+</RelativeLayout>
