@@ -41,6 +41,9 @@ public class ModelHandler extends Handler implements ActionHandler {
             case REMOVE_CHECKED_NOTES:
                 getRepository().removeChecked();
             break;
+            case ADD_NOTE:
+                getRepository().add(note);
+            break;
         }
 
         getRootActionHandler().invokeAction(HandlerLevel.VIEW, Action.REFRESH_VIEW);

@@ -1,9 +1,11 @@
 package nu.rolandsson.jakob.notera.controller;
 
 
+import android.content.Intent;
 import android.widget.Button;
 
 import nu.rolandsson.jakob.notera.MainActivity;
+import nu.rolandsson.jakob.notera.NoteActivity;
 import nu.rolandsson.jakob.notera.R;
 import nu.rolandsson.jakob.notera.controller.constant.Action;
 import nu.rolandsson.jakob.notera.controller.constant.HandlerLevel;
@@ -42,6 +44,10 @@ public class ViewHandler extends Handler implements ActionHandler{
                         getString(R.string.main_format_remove_btn, amount);
                 Button button = getActivity().findViewById(R.id.main_remove_button);
                 button.setText(removeBtnText);
+            break;
+            case OPEN_ADD_VIEW:
+                Intent intent = new Intent(getActivity(), NoteActivity.class);
+                getActivity().startActivityForResult(intent, MainActivity.REQUEST_ADD_NOTE);
             break;
         }
     }

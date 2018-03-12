@@ -28,7 +28,7 @@ public class ButtonComponent extends AppCompatButton {
     public void setButtonType(ButtonType type) {
         switch(type) {
             case ADD:
-
+                this.setOnClickListener(onClickOpenAddView());
             break;
             case REMOVE:
                 this.setOnClickListener(onClickRemoveChecked());
@@ -36,6 +36,11 @@ public class ButtonComponent extends AppCompatButton {
         }
     }
 
+    OnClickListener onClickOpenAddView() {
+        return view -> {
+            rootHandler.invokeAction(HandlerLevel.VIEW, Action.OPEN_ADD_VIEW);
+        };
+    }
 
     OnClickListener onClickRemoveChecked() {
         return view -> {

@@ -5,4 +5,8 @@
     <string name="main_default_remove_btn">Remove (0)</string>
     <string name="main_format_remove_btn">Remove (%d)</string>
     <string name="main_search_note">Search..</string>
+
+    <string name="note_title_hint">Note title..</string>
+    <string name="note_text_hint">Note text..</string>
+    <string name="note_save_btn">Save note</string>
 </resources>
