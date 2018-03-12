@@ -27,14 +27,14 @@
         style="?android:attr/buttonBarButtonStyle"
         android:id="@+id/main_bottom_toolbar">
 
-        <Button
+        <nu.rolandsson.jakob.notera.component.ButtonComponent
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/main_add_btn"
             android:layout_weight="1"
             android:id="@+id/main_add_button"/>
 
-        <Button
+        <nu.rolandsson.jakob.notera.component.ButtonComponent
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/main_default_remove_btn"

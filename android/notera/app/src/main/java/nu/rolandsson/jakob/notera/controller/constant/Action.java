@@ -7,5 +7,6 @@ package nu.rolandsson.jakob.notera.controller.constant;
 public enum Action {
     TOGGLE_CHECK,
     REFRESH_VIEW,
+    REMOVE_CHECKED_NOTES,
     UPDATE_CHECKED
 }

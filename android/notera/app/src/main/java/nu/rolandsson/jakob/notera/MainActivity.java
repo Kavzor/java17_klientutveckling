@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.*;
 
 import nu.rolandsson.jakob.notera.adapter.NoteListAdapter;
+import nu.rolandsson.jakob.notera.component.ButtonComponent;
 import nu.rolandsson.jakob.notera.component.NoteListComponent;
 import nu.rolandsson.jakob.notera.controller.ActionHandler;
 import nu.rolandsson.jakob.notera.controller.ModelHandler;
@@ -17,8 +18,8 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
 
     private NoteListComponent noteList;
     private SearchView searchView;
-    private Button removeBtn;
-    private Button addBtn;
+    private ButtonComponent removeBtn;
+    private ButtonComponent addBtn;
 
     private ActionHandler rootActionHandler;
 
@@ -39,6 +40,9 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
         noteList = findViewById(R.id.main_note_list);
         searchView = findViewById(R.id.main_note_search);
 
+        removeBtn = findViewById(R.id.main_remove_button);
+        removeBtn.setButtonType(ButtonComponent.ButtonType.REMOVE);
+
     }
 
     private void setupHandlers() {
@@ -52,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
     public void setRootActionHandler(ActionHandler handler) {
         this.rootActionHandler = handler;
     }
+
     public ActionHandler getRootActionHandler() {
         return this.rootActionHandler;
     }
