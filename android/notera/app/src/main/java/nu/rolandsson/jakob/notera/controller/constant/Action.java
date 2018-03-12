@@ -10,5 +10,6 @@ public enum Action {
     OPEN_ADD_VIEW,
     REMOVE_CHECKED_NOTES,
     UPDATE_CHECKED,
-    ADD_NOTE
+    ADD_NOTE,
+    REMOVE_NOTE
 }

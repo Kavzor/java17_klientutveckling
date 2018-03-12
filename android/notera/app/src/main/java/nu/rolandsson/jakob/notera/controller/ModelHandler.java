@@ -44,6 +44,9 @@ public class ModelHandler extends Handler implements ActionHandler {
             case ADD_NOTE:
                 getRepository().add(note);
             break;
+            case REMOVE_NOTE:
+                getRepository().remove(note);
+            break;
         }
 
         getRootActionHandler().invokeAction(HandlerLevel.VIEW, Action.REFRESH_VIEW);

@@ -25,21 +25,28 @@
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
         style="?android:attr/buttonBarButtonStyle"
-        android:id="@+id/main_bottom_toolbar">
+        android:id="@+id/main_bottom_toolbar"
+        android:background="@color/colorPrimary">
 
         <nu.rolandsson.jakob.notera.component.ButtonComponent
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/main_add_btn"
             android:layout_weight="1"
-            android:id="@+id/main_add_button"/>
+            android:id="@+id/main_add_button"
+            android:drawableLeft="@drawable/ic_add_note"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorDarkContrast"/>
 
         <nu.rolandsson.jakob.notera.component.ButtonComponent
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="@string/main_default_remove_btn"
             android:layout_weight="1"
-            android:id="@+id/main_remove_button"/>
+            android:id="@+id/main_remove_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:textColor="@color/colorDarkContrast"
+            android:drawableLeft="@drawable/ic_remove_note"/>
     </LinearLayout>
 
 </RelativeLayout>

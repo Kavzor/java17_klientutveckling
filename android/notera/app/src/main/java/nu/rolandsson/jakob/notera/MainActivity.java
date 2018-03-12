@@ -16,7 +16,7 @@ import nu.rolandsson.jakob.notera.controller.constant.Action;
 import nu.rolandsson.jakob.notera.controller.constant.HandlerLevel;
 import nu.rolandsson.jakob.notera.shared.Note;
 
-public class MainActivity extends AppCompatActivity implements RootActionHandler {
+public class MainActivity extends AppCompatActivity implements RootActionHandler, SearchView.OnQueryTextListener {
 
     public static final int REQUEST_ADD_NOTE = 0;
     public static final int REQUEST_UPDATE_NOTE = 1;
@@ -47,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
 
         addBtn = findViewById(R.id.main_add_button);
         addBtn.setButtonType(ButtonComponent.ButtonType.ADD);
+
+
+        searchView = findViewById(R.id.main_note_search);
+        searchView.setOnQueryTextListener(this);
     }
 
     private void setupHandlers() {
@@ -90,5 +94,17 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
                 break;
             }
         }
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        NoteListAdapter adapter = (NoteListAdapter) getListComponent().getAdapter();
+        adapter.getFilter().filter(newText);
+        return true;
     }
 }

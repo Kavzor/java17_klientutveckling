@@ -9,4 +9,9 @@
     <string name="note_title_hint">Note title..</string>
     <string name="note_text_hint">Note text..</string>
     <string name="note_save_btn">Save note</string>
+
+
+    <string name="menu_title">Note options</string>
+    <string name="menu_update">Update</string>
+    <string name="menu_remove">Remove</string>
 </resources>

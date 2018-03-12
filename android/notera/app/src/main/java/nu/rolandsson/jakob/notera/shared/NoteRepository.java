@@ -19,8 +19,10 @@ public class NoteRepository {
         filteredNotes = notes;
     }
 
-    public void reset() {
+    public List<Note> reset() {
+        //återställ listan inför en filtrering
         this.filteredNotes = this.notes;
+        return this.getAll();
     }
 
     public List<Note> getAll() {
