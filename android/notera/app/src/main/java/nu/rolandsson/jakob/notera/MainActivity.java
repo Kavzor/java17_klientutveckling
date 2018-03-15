@@ -10,6 +10,7 @@ import nu.rolandsson.jakob.notera.component.ButtonComponent;
 import nu.rolandsson.jakob.notera.component.NoteListComponent;
 import nu.rolandsson.jakob.notera.controller.ActionHandler;
 import nu.rolandsson.jakob.notera.controller.ModelHandler;
+import nu.rolandsson.jakob.notera.controller.PreferencesHandler;
 import nu.rolandsson.jakob.notera.controller.RootActionHandler;
 import nu.rolandsson.jakob.notera.controller.ViewHandler;
 import nu.rolandsson.jakob.notera.controller.constant.Action;
@@ -56,8 +57,10 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
     private void setupHandlers() {
         ActionHandler viewHandler = new ViewHandler(this);
         ActionHandler modelHandler = new ModelHandler(this);
+        ActionHandler preferencesHandler = new PreferencesHandler(this);
 
         viewHandler.setNextHandler(modelHandler);
+        modelHandler.setNextHandler(preferencesHandler);
         setRootActionHandler(viewHandler);
     }
 
@@ -85,12 +88,17 @@ public class MainActivity extends AppCompatActivity implements RootActionHandler
 
         if(resultCode == RESULT_OK) {
             Note note = (Note) data.getSerializableExtra("note");
+            int position = data.getIntExtra("note_position", -1);
 
             getListComponent().setSelectedNote(note);
+            getListComponent().setSelectedPosition(position);
 
             switch(requestCode) {
                 case REQUEST_ADD_NOTE:
                     invokeAction(HandlerLevel.MODEL, Action.ADD_NOTE);
+                break;
+                case REQUEST_UPDATE_NOTE:
+                    invokeAction(HandlerLevel.MODEL, Action.UPDATE_NOTE);
                 break;
             }
         }

@@ -9,6 +9,7 @@ import nu.rolandsson.jakob.notera.NoteActivity;
 import nu.rolandsson.jakob.notera.R;
 import nu.rolandsson.jakob.notera.controller.constant.Action;
 import nu.rolandsson.jakob.notera.controller.constant.HandlerLevel;
+import nu.rolandsson.jakob.notera.shared.Note;
 
 public class ViewHandler extends Handler implements ActionHandler{
 
@@ -46,8 +47,16 @@ public class ViewHandler extends Handler implements ActionHandler{
                 button.setText(removeBtnText);
             break;
             case OPEN_ADD_VIEW:
-                Intent intent = new Intent(getActivity(), NoteActivity.class);
-                getActivity().startActivityForResult(intent, MainActivity.REQUEST_ADD_NOTE);
+                Intent addIntent = new Intent(getActivity(), NoteActivity.class);
+                getActivity().startActivityForResult(addIntent, MainActivity.REQUEST_ADD_NOTE);
+            break;
+            case OPEN_UPDATE_VIEW:
+                Intent updateIntent = new Intent(getActivity(), NoteActivity.class);
+                Note note = getListComponent().getSelectedNote();
+                int position = getListComponent().getSelectedPosition();
+                updateIntent.putExtra("note", note);
+                updateIntent.putExtra("note_position", position);
+                getActivity().startActivityForResult(updateIntent, MainActivity.REQUEST_UPDATE_NOTE);
             break;
         }
     }

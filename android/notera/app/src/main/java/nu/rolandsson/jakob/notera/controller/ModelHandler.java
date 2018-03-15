@@ -47,6 +47,11 @@ public class ModelHandler extends Handler implements ActionHandler {
             case REMOVE_NOTE:
                 getRepository().remove(note);
             break;
+            case UPDATE_NOTE:
+                int position = getListComponent().getSelectedPosition();
+                position = getRepository().getId(position);
+                getRepository().update(position, note);
+            break;
         }
 
         getRootActionHandler().invokeAction(HandlerLevel.VIEW, Action.REFRESH_VIEW);

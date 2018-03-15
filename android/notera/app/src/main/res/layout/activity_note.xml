@@ -13,13 +13,20 @@
         android:padding="20dp"
         android:id="@+id/note_title"/>
 
-    <EditText
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/note_title"
-        android:id="@+id/note_text"
-        android:hint="@string/note_text_hint"/>
+        android:layout_above="@id/note_save_btn">
 
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/note_text"
+            android:hint="@string/note_text_hint"
+            android:paddingHorizontal="30dp" />
+    </ScrollView>
 
     <Button
         android:layout_width="match_parent"

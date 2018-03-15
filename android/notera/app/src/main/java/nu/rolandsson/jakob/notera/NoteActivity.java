@@ -17,6 +17,8 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
     private EditText title;
     private EditText text;
 
+    private int position;
+
     private Button saveBtn;
 
     @Override
@@ -24,6 +26,7 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
         findViews();
+        setIntentData();
 
 
         saveBtn.setOnClickListener(this);
@@ -36,6 +39,17 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
         saveBtn = findViewById(R.id.note_save_btn);
     }
 
+    private void setIntentData() {
+        Intent intent = getIntent();
+        position = intent.getIntExtra("note_position", -1);
+        Note note = (Note) intent.getSerializableExtra("note");
+
+        if(position > -1) {
+            title.setText(note.getTitle());
+            text.setText(note.getText());
+        }
+    }
+
     @Override
     public void onClick(View v) {
         String titleValue = title.getText().toString();
@@ -46,6 +60,7 @@ public class NoteActivity extends AppCompatActivity implements View.OnClickListe
 
         Intent intent = new Intent();
         intent.putExtra("note", note);
+        intent.putExtra("note_position", position);
         setResult(RESULT_OK, intent);
         finish();
     }

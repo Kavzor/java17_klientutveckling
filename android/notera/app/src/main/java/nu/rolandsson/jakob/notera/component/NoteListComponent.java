@@ -91,12 +91,12 @@ public class NoteListComponent extends ListView
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         AdapterContextMenuInfo info = (AdapterContextMenuInfo) item.getMenuInfo();
-        setSelectedPosition(info.position);
-        setSelectedNote((Note) getItemAtPosition(info.position));
+        this.setSelectedPosition(info.position);
+        this.setSelectedNote((Note) getItemAtPosition(info.position));
 
         String menuAction = item.getTitle().toString();
         if(menuAction.equals("Update")) {
-            //
+            rootHandler.invokeAction(HandlerLevel.VIEW, Action.OPEN_UPDATE_VIEW);
         }
         else if(menuAction.equals("Remove")) {
             rootHandler.invokeAction(HandlerLevel.MODEL, Action.REMOVE_NOTE);

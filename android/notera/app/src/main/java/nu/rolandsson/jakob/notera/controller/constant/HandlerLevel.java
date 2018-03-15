@@ -5,5 +5,5 @@ package nu.rolandsson.jakob.notera.controller.constant;
  */
 
 public enum HandlerLevel {
-    VIEW, MODEL
+    VIEW, MODEL, PREFERENCES
 }
